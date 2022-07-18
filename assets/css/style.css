@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: aqua;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  margin-top: 250px;
+  margin-bottom: 15px;
+  background-color: aquamarine;
+  font-weight: bold;
+  color: brown;
+  padding: 35px;
+  font-size: 44px;
+  border: 2px solid #000;
+  border-radius: 5%;
+  box-shadow: inset 0 0 1em rgb(88, 88, 62), 0 0 1em rgb(52, 124, 110);
+}
+p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
