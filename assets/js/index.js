@@ -1,34 +1,19 @@
-// 1° Cria uma instância JavaScript de Date que representa um único momento no tempo. Objetos Date são baseados no valor de tempo que é o número de milisegundos.
-// var tempo = new Date();
-
-/*
-O método getHours() retorna a hora para a data especificada, de acordo com a hora local.
-
-tempo.getHours();
-
-O método getMinutes() retorna a hora para a data especificada, de acordo com a hora local.
-tempo.getMinutes();
-
-O método getSeconds() retorna a hora para a data especificada, de acordo com a hora local.
-tempo.getSeconds();
-*/
-
+// Criar a função para mostrar a hora
 function mostraTempo() {
+  // criar variavel para pega o display da tela
   var display = document.querySelector(".display");
+  //   Criar variavel do new date
   var tempo = new Date();
-  var hora =
-    adionaZeroNaFrente(tempo.getHours()) +
-    ":" +
-    adionaZeroNaFrente(tempo.getMinutes()) +
-    ":" +
-    adionaZeroNaFrente(tempo.getSeconds());
-
+  //   Criar variavel da hora chamando a função get
+  var hora = tempo.getHours + ":" + tempo.getMinutes + ":" + tempo.getSeconds;
+  //   chamar a função para mostrar a hora na tela
   display.textContent = hora;
 }
 mostraTempo();
+// função para executar o intervalo e continuar a contagem
 setInterval(mostraTempo, 1000);
-
-function adionaZeroNaFrente(numero) {
+// Criar função para adicionar o zero antes
+function adicionaZeroNaFrente(numero) {
   if (numero < 10) {
     numero = "0" + numero;
   }
